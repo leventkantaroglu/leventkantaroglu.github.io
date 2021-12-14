@@ -4,19 +4,20 @@ const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
   "version.json": "499f3b20f5bd2c9daaeea3c1e35faab2",
-"index.html": "0c0590b4b8621304ca18a5b82c124478",
-"/": "0c0590b4b8621304ca18a5b82c124478",
-"main.dart.js": "c7b34e42fc9b656a6996ea490f205d6e",
+"index.html": "b02559a9651e09d6414601544f9ffa01",
+"/": "b02559a9651e09d6414601544f9ffa01",
+"main.dart.js": "38208f32851e14755445ce5fe1b526da",
 "favicon.png": "443c861c9ec64732ef4b9c0b8e566eb2",
 "icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1",
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
 "manifest.json": "de9a8cb7e025fd2127403acd782507e8",
-"assets/AssetManifest.json": "bcd711233954178f52d272dee46963df",
+"assets/AssetManifest.json": "80107bb0695071d2e9d2f55f66931440",
 "assets/NOTICES": "456f0427a49579e525d03901e64ff21d",
 "assets/FontManifest.json": "dc3d03800ccca4601324923c0b1d6d57",
 "assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "6d342eb68f170c97609e9da345464e5e",
 "assets/fonts/MaterialIcons-Regular.otf": "4e6447691c9509f7acdbf8a931a85ca1",
 "assets/assets/personal/levent-kantaroglu.png": "b89fbf791c18de6e8020a0489d27bfc0",
+"assets/assets/personal/levent-kantaroglu.jpg": "343bab8425a11bea8314044db44f9029",
 "assets/assets/gplaypattern1x.png": "5dacd004927da04b74e271b176c3dee0",
 "assets/assets/course-dummy-cover.png": "c616e7b482363cc6315ab41b3e242180"
 };
