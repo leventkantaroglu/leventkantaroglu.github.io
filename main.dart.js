@@ -82167,15 +82167,15 @@
         $S: 0
     }
     X.a2U.prototype = {
-        $0() { this.a.ik("https://twitter.com/levent_dev") },
+        $0() { this.a.ik("https://twitter.com/levcodes") },
         $S: 0
     }
     X.a2V.prototype = {
-        $0() { this.a.ik("https://www.instagram.com/flutter_adam") },
+        $0() { this.a.ik("https://www.instagram.com/levcodes") },
         $S: 0
     }
     X.a2W.prototype = {
-        $0() { this.a.ik("https://www.youtube.com/c/FlutterAdam") },
+        $0() { this.a.ik("https://www.youtube.com/@levcodes") },
         $S: 0
     }
     X.Mc.prototype = {
