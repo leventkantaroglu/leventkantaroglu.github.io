@@ -118,41 +118,42 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 0.75rem;
-            background: var(--primary);
-            padding: 1rem 2rem;
-            border-radius: 20px;
+            gap: 0.8rem;
+            background: #000000;
+            padding: 0.6rem 1.2rem;
+            border-radius: 8px;
             color: white;
             text-decoration: none;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            box-shadow: 0 10px 20px rgba(30, 77, 78, 0.2);
-            min-width: 220px;
+            transition: all 0.2s ease;
+            min-width: 180px;
+            border: 1px solid #A1A1A1;
         }
 
         .download-btn:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(30, 77, 78, 0.3);
-            background: var(--dark);
+            background: #222222;
+            transform: scale(1.02);
         }
 
         .download-btn svg {
-            width: 28px;
-            height: 28px;
+            width: 24px;
+            height: 24px;
         }
 
         .btn-text {
             display: flex;
             flex-direction: column;
             align-items: flex-start;
+            line-height: 1.1;
         }
 
         .btn-label {
-            font-size: 0.75rem;
-            opacity: 0.8;
+            font-size: 0.65rem;
+            font-weight: 400;
+            opacity: 0.9;
         }
 
         .btn-store {
-            font-weight: 600;
+            font-weight: 700;
             font-size: 1.1rem;
         }
 
