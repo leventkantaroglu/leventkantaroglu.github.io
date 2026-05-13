@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GezTrip - Seyahat Planlayıcı ve Harcama Takibi</title>
+    <meta name="description" content="GezTrip: Planla, Harca, Deneyimle. Gemini AI destekli akıllı seyahat asistanı.">
+    <link rel="icon" type="image/png" href="../favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1E4D4E;
+            /* Deep Teal */
+            --accent: #FF7043;
+            /* Vibrant Orange */
+            --bg: #F9F7F2;
+            /* Light Beige */
+            --dark: #0F2627;
+            --text: #1E4D4E;
+            --text-dim: #5A7D7E;
+            --glass: rgba(30, 77, 78, 0.05);
+            --glass-border: rgba(30, 77, 78, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        header {
+            padding: 3rem 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--primary);
+            letter-spacing: -1.5px;
+        }
+
+        .logo span {
+            color: var(--accent);
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            color: var(--dark);
+        }
+
+        @media (max-width: 640px) {
+            .hero-content h1 {
+                font-size: 2.2rem;
+            }
+        }
+
+        .hero-content p {
+            font-size: 1.25rem;
+            color: var(--text-dim);
+            margin-bottom: 3rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .tripod-philosophy {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.9rem;
+            color: var(--accent);
+        }
+
+        .download-buttons {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 5rem;
+        }
+
+        .download-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            background: var(--primary);
+            padding: 1rem 2rem;
+            border-radius: 20px;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 10px 20px rgba(30, 77, 78, 0.2);
+            min-width: 220px;
+        }
+
+        .download-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(30, 77, 78, 0.3);
+            background: var(--dark);
+        }
+
+        .download-btn svg {
+            width: 28px;
+            height: 28px;
+        }
+
+        .btn-text {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .btn-label {
+            font-size: 0.75rem;
+            opacity: 0.8;
+        }
+
+        .btn-store {
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            width: 100%;
+            margin-top: 2rem;
+        }
+
+        .feature-card {
+            background: white;
+            border: 1px solid var(--glass-border);
+            padding: 3rem 2rem;
+            border-radius: 30px;
+            text-align: left;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+
+        .feature-card h3 {
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            color: var(--dark);
+        }
+
+        .feature-card p {
+            color: var(--text-dim);
+            font-size: 1.05rem;
+        }
+
+        footer {
+            margin-top: 6rem;
+            padding: 4rem 0;
+            border-top: 1px solid var(--glass-border);
+            text-align: center;
+            color: var(--text-dim);
+            font-size: 0.95rem;
+        }
+
+        .developer {
+            font-weight: 600;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        /* Decorative elements */
+        .bg-shape {
+            position: absolute;
+            z-index: -1;
+            filter: blur(100px);
+            opacity: 0.4;
+        }
+
+        .shape-1 {
+            top: -10%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: var(--accent);
+            border-radius: 50%;
+        }
+
+        .shape-2 {
+            bottom: 10%;
+            left: -10%;
+            width: 400px;
+            height: 400px;
+            background: var(--primary);
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg-shape shape-1"></div>
+    <div class="bg-shape shape-2"></div>
+
+    <div class="container">
+        <header>
+            <div class="logo">Gez<span>Trip</span></div>
+        </header>
+
+        <main>
+            <div class="hero-content">
+                <div class="tripod-philosophy">Planla • Harca • Deneyimle</div>
+                <h1>Seyahat Planlayıcı ve Harcama Takibi</h1>
+                <p>GezTrip ile seyahatlerinizi planlayın, yeni yerler keşfedin ve tüm harcamalarınızı tek bir yerden
+                    kolayca yönetin.</p>
+
+                <div class="download-buttons">
+                    <a href="https://apps.apple.com/tr/app/geztrip-travel-planner-log/id6765680831"
+                        class="download-btn">
+                        <svg viewBox="0 0 384 512" fill="currentColor">
+                            <path
+                                d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z" />
+                        </svg>
+                        <div class="btn-text">
+                            <span class="btn-label">App Store'dan</span>
+                            <span class="btn-store">İndirin</span>
+                        </div>
+                    </a>
+                    <a href="https://play.google.com/store/apps/details?id=com.leventkantaroglu.geztrip"
+                        class="download-btn">
+                        <svg viewBox="0 0 512 512" fill="currentColor">
+                            <path
+                                d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8zM104.6 499l280.8-161.2-60.1-60.1L104.6 499z" />
+                        </svg>
+                        <div class="btn-text">
+                            <span class="btn-label">Google Play'den</span>
+                            <span class="btn-store">Edinin</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="features">
+                <div class="feature-card">
+                    <span class="feature-icon">📅</span>
+                    <h3>Planla</h3>
+                    <p>Seyahat planlarınızı kolayca oluşturun, düzenleyin ve her an elinizin altında tutun.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">🔍</span>
+                    <h3>Keşfet</h3>
+                    <p>Yeni destinasyonlar ve rotalar keşfederek seyahatlerinize heyecan katın.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">📊</span>
+                    <h3>Harcamalarını Takip Et</h3>
+                    <p>Seyahat bütçenizi yönetin ve tüm harcamalarınızı kolayca kayıt altına alarak kontrolü elden
+                        bırakmayın.</p>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 GezTrip. Tüm hakları saklıdır.</p>
+            <p>Geliştirici: <a href="/" class="developer">Levent Kantaroğlu</a></p>
+        </footer>
+    </div>
+</body>
+
+</html>
