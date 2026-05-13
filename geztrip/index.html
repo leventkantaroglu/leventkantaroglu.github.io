@@ -135,8 +135,9 @@
         }
 
         .download-btn svg {
-            width: 22px;
             height: 22px;
+            width: auto;
+            flex-shrink: 0;
             display: block;
         }
 
@@ -144,20 +145,23 @@
             display: flex;
             flex-direction: column;
             align-items: flex-start;
-            line-height: 1;
-            margin-bottom: -1px; /* Visual alignment fix */
+            line-height: 0.85;
+            margin-top: 1px;
         }
 
         .btn-label {
             font-size: 0.6rem;
             font-weight: 400;
             opacity: 0.9;
-            margin-bottom: 2px;
+            margin: 0;
+            padding: 0;
         }
 
         .btn-store {
             font-weight: 700;
             font-size: 1.05rem;
+            margin: 0;
+            padding: 0;
             margin-top: -1px;
         }
 
